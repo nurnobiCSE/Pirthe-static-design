@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="js/tailwind.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.2/dist/cdn.min.js" defer></script>
+    <title>Temporary</title>
+    <style>
+        @keyframes modal_img_appear {
+            from {
+                opacity: 0;
+                transform: translateY(100px); /* Move the element from 30px below */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Move the element to its final position */
+            }
+        }
+        @keyframes modal_text_appear {
+            from {
+                opacity: 0;
+                transform: translateX(100px); /* Move the element from 30px below */
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0); /* Move the element to its final position */
+            }
+        }
+        .modal_txt_Animate {
+            animation: modal_text_appear 1s ease-out; /* Adjust timing and easing as needed */
+        }
+        .modal_img_Animate {
+            animation: modal_img_appear 1s ease-out; /* Adjust timing and easing as needed */
+        }
+    </style>
+</head>
+
+<body>
+    
+</body>
+
+</html>

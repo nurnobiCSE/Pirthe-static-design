@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="js/tailwind.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.2/dist/cdn.min.js" defer></script>
+    <title>Property-</title>
+</head>
+
+<body>
+    <!-- header section -->
+    <div x-data="{ showFirst: false, showSecond: false ,showThird: false}" x-init="setTimeout(() => { 
+        showFirst = true; 
+        setTimeout(() => { 
+            showSecond = true; 
+            setTimeout(() => { 
+                showThird = true; 
+            }, 500); // Delay for showThird
+        }, 500); // Delay for showSecond
+    }, 500);" class="relative w-full h-screen bg-black mx-auto">
+        <img src="img/banner-1.jpg" class="absolute opacity-60 inset-0 h-full w-full"></img>
+
+        <nav class=" absolute w-full border-gray-200 dark:bg-gray-900">
+
+            <div class="max-w-screen-xl flex flex-wrap items-center mx-auto px-20 py-4">
+
+                <a href="#" class="w-1/4 flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="img/logo.png" class="h-20" alt="Logo" />
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="ml-32 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+
+                <div class="hidden w-3/4 md:block md:w-auto flex justify-start" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col p-6 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
+                        <li>
+                            <a href="#" onclick="setActive(this)"
+                                class="menu-item block py-2 px-3 rounded md:bg-transparent hover:text-[#ffaa17] md:p-0 text-yellow-500"
+                                >Home</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="setActive(this)"
+                                class="menu-item block py-2 px-3 text-white rounded md:border-0  md:p-0 hover:text-[#ffaa17]">Software</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="setActive(this)"
+                                class="menu-item block py-2 px-3 text-white rounded md:border-0  md:p-0  hover:text-[#ffaa17]">Property
+                                Care</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="setActive(this)"
+                                class="menu-item block py-2 px-3 text-white rounded md:border-0  md:p-0 hover:text-[#ffaa17]">Agro</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="setActive(this)"
+                                class="menu-item block py-2 px-3 text-white rounded md:border-0  md:p-0  hover:text-[#ffaa17]">About
+                                Us</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="setActive(this)"
+                                class="menu-item block py-2 px-3 text-white rounded md:border-0  md:p-0  hover:text-[#ffaa17]">Services</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="setActive(this)"
+                                class="menu-item block py-2 px-3 text-white rounded md:border-0  md:p-0  hover:text-[#ffaa17]">Blogs</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="setActive(this)"
+                                class="menu-item block py-2 px-3 text-white rounded md:border-0  md:p-0  hover:text-[#ffaa17]">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex flex-col items-center justify-center h-full pb-48">
+            <h1 x-show="showFirst" x-transition:enter="transition ease-out duration-1000"
+                x-transition:enter-start="opacity-0 transform translate-y-10"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                class="text-white text-6xl font-semibold text-center z-10">Denver Property Management</h1>
+            <h1 x-show="showFirst" x-transition:enter="transition ease-out duration-1000"
+                x-transition:enter-start="opacity-0 transform translate-y-10"
+                x-transition:enter-end="opacity-100 transform translate-y-0"
+                class="italic py-4 text-white text-2xl font-semibold text-center z-10">Improving the Lives of Real
+                Estate Investors and Residents Since 1978</h1>
+        </div>
+        <img x-show="showSecond" x-transition:enter="transition ease-out duration-1000"
+            x-transition:enter-start="opacity-0 transform translate-y-10"
+            x-transition:enter-end="opacity-100 transform translate-y-0" src="img/ipad.png"
+            class="w-80 h-80 absolute opacity-100 bottom-0 left-1/2 transform -translate-x-1/2 " alt="">
+        <div x-show="showThird" x-transition:enter="transition ease-out duration-1000"
+            x-transition:enter-start="opacity-0 transform translate-y-10"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            class="absolute bottom-0 left-0 w-full bg-blue-600 bg-opacity-60 text-white py-4 px-14">
+            <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between items-center">
+                <p class="text-center text-xl font-semibold"> <span class="uppercase">Denver Real Estate
+                        Investors:</span> How much can you rent your home for?</p>
+                <button
+                    class="text-white bg-transparent border border-white uppercase text-lg hover:bg-white hover:text-[#ffaa17] py-2 px-4 rounded-full">Free
+                    rental analysis</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- card banner section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 md:gap-0">
+        <div
+            class="flex justify-center items-center space-x-10 bg-[#8f1307] py-10 group hover:cursor-pointer mt-2 md:mt-0">
+            <svg class="w-12 text-white transform transition-transform duration-300 group-hover:scale-150"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentcolor"
+                    d="M24 32c13.3 0 24 10.7 24 24l0 352c0 13.3 10.7 24 24 24l416 0c13.3 0 24 10.7 24 24s-10.7 24-24 24L72 480c-39.8 0-72-32.2-72-72L0 56C0 42.7 10.7 32 24 32zM128 136c0-13.3 10.7-24 24-24l208 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-208 0c-13.3 0-24-10.7-24-24zm24 72l144 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-144 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 96l272 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-272 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
+            </svg>
+            <p class="text-white font-semibold text-3xl uppercase">owner benefits</p>
+        </div>
+        <div class="flex justify-center items-center space-x-10 bg-[#650a02] py-10 group hover:cursor-pointer">
+            <svg class="w-12 text-white transform transition-transform duration-300 group-hover:scale-150"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentcolor"
+                    d="M24 32c13.3 0 24 10.7 24 24l0 352c0 13.3 10.7 24 24 24l416 0c13.3 0 24 10.7 24 24s-10.7 24-24 24L72 480c-39.8 0-72-32.2-72-72L0 56C0 42.7 10.7 32 24 32zM128 136c0-13.3 10.7-24 24-24l208 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-208 0c-13.3 0-24-10.7-24-24zm24 72l144 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-144 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 96l272 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-272 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
+            </svg>
+            <p class="text-white font-semibold text-3xl uppercase">search rentals</p>
+        </div>
+        <div class="flex justify-center items-center space-x-10 bg-[#480802] py-10 group hover:cursor-pointer">
+            <svg class="w-12 text-white transform transition-transform duration-300 group-hover:scale-150"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentcolor"
+                    d="M24 32c13.3 0 24 10.7 24 24l0 352c0 13.3 10.7 24 24 24l416 0c13.3 0 24 10.7 24 24s-10.7 24-24 24L72 480c-39.8 0-72-32.2-72-72L0 56C0 42.7 10.7 32 24 32zM128 136c0-13.3 10.7-24 24-24l208 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-208 0c-13.3 0-24-10.7-24-24zm24 72l144 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-144 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 96l272 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-272 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z" />
+            </svg>
+            <p class="text-white font-semibold text-3xl uppercase">residet benefits</p>
+        </div>
+    </div>
+    <!-- Our Strengths Section -->
+    <div class="relative md:py-10">
+        <!-- Background image container -->
+        <div class="absolute inset-0 bg-center bg-no-repeat bg-cover md:bg-[url('img/city.png')]"></div>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-white opacity-10"></div>
+
+        <!-- Content section -->
+        <div class="relative z-10 text-center text-[#737373]">
+            <h1
+                class="text-2xl md:text-6xl font-bold underline underline-offset-[20px] md:underline-offset-[24px] decoration-1">
+                Our Strengths
+            </h1>
+
+            <!-- Live text section -->
+            <div class="mt-10 text-md px-2 md:text-3xl font-semibold">
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                <p class="text-center"><span id="typed"></span></p>
+                <script>
+                    const typed = new Typed('#typed', {
+                        strings: ['Variety in Product Matrix', 'Functional', 'Quality Materials', 'Highly Skilled Construction Team', 'Wide range of post handover services', 'Efficient Sales'],
+                        typeSpeed: 50,
+                        backSpeed: 40,
+                        backDelay: 1200,
+                        loop: true
+                    });
+                </script>
+
+                <p class="px-10 text-sm md:text-xl text-center mt-8 leading-8">
+                    Highly Skilled Construction Team | Well Coordinated Management Team | Efficient Sales & Marketing
+                    Team
+                    Good Project Locations | Variety in Product Matrix | Quality Materials | Functional & Aesthetic
+                    Product Design | Wide Range of Post Handover Services
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Section -->
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+        <!-- Card template 1-->
+        <div class="max-w-sm bg-white rounded-lg border-b border-gray-300">
+            <div class="relative group">
+                <img class="rounded-t-lg h-46 w-full transition-transform duration-500 group-hover:scale-110"
+                    src="img/procard1.jpg" alt="" />
+            </div>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-lg font-bold tracking-tight text-[#737373] dark:text-white">The Largest Home
+                        Builders and Developers In Bangladesh</h5>
+                </a>
+                <p class="mb-3 text-sm text-[#737373]"><strong>Asset Developments & Holdings Ltd</strong> has the
+                    strongest organization in the sector having 2000 plus employees consisting of managers, engineers,
+                    sales…</p>
+                <!-- Hidden content -->
+                <div class="more-text hidden text-sm text-[#737373]">
+                    <p>
+                        Asset Developments & Holdings Ltd has been a major player in the construction and real estate
+                        industry,
+                        with a strong presence in both residential and commercial development. Our expertise spans
+                        various
+                        sectors including real estate, construction management, and project development. We are
+                        committed to
+                        delivering high-quality projects that exceed client expectations and contribute to the
+                        advancement of
+                        infrastructure and urban development in Bangladesh.
+                    </p>
+                </div>
+                <a href="#"
+                    class="read-more-toggle inline-flex items-center text-sm font-medium text-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                    <span class="read-more-text">Read more</span>
+                </a>
+            </div>
+        </div>
+        <!-- Card template 2-->
+        <div class="max-w-sm bg-white rounded-lg border-b border-gray-300">
+            <div class="relative group">
+                <img class="rounded-t-lg h-46 w-full transition-transform duration-500 group-hover:scale-110"
+                    src="img/procard2.jpg" alt="" />
+            </div>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-lg font-bold tracking-tight text-[#737373] dark:text-white">The Largest Home
+                        Builders and Developers In Bangladesh</h5>
+                </a>
+                <p class="mb-3 text-sm text-[#737373]"><strong>Asset Developments & Holdings Ltd</strong> has the
+                    strongest organization in the sector having 2000 plus employees consisting of managers, engineers,
+                    sales…</p>
+                <!-- Hidden content -->
+                <div class="more-text hidden text-sm text-[#737373]">
+                    <p>
+                        Asset Developments & Holdings Ltd has been a major player in the construction and real estate
+                        industry,
+                        with a strong presence in both residential and commercial development. Our expertise spans
+                        various
+                        sectors including real estate, construction management, and project development. We are
+                        committed to
+                        delivering high-quality projects that exceed client expectations and contribute to the
+                        advancement of
+                        infrastructure and urban development in Bangladesh.
+                    </p>
+                </div>
+                <a href="#"
+                    class="read-more-toggle inline-flex items-center text-sm font-medium text-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                    <span class="read-more-text">Read more</span>
+                </a>
+            </div>
+        </div>
+        <!-- Card template 3-->
+        <div class="max-w-sm bg-white rounded-lg border-b border-gray-300">
+            <div class="relative group">
+                <img class="rounded-t-lg h-46 w-full transition-transform duration-500 group-hover:scale-110"
+                    src="img/procard3.jpg" alt="" />
+            </div>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-lg font-bold tracking-tight text-[#737373] dark:text-white">The Largest Home
+                        Builders and Developers In Bangladesh</h5>
+                </a>
+                <p class="mb-3 text-sm text-[#737373]"><strong>Asset Developments & Holdings Ltd</strong> has the
+                    strongest organization in the sector having 2000 plus employees consisting of managers, engineers,
+                    sales…</p>
+                <!-- Hidden content -->
+                <div class="more-text hidden text-sm text-[#737373]">
+                    <p>
+                        Asset Developments & Holdings Ltd has been a major player in the construction and real estate
+                        industry,
+                        with a strong presence in both residential and commercial development. Our expertise spans
+                        various
+                        sectors including real estate, construction management, and project development. We are
+                        committed to
+                        delivering high-quality projects that exceed client expectations and contribute to the
+                        advancement of
+                        infrastructure and urban development in Bangladesh.
+                    </p>
+                </div>
+                <a href="#"
+                    class="read-more-toggle inline-flex items-center text-sm font-medium text-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                    <span class="read-more-text">Read more</span>
+                </a>
+            </div>
+        </div>
+        <!-- Card template 4-->
+        <div class="max-w-sm bg-white rounded-lg border-b border-gray-300">
+            <div class="relative group">
+                <img class="rounded-t-lg h-46 w-full transition-transform duration-500 group-hover:scale-110"
+                    src="img/procard4.jpg" alt="" />
+            </div>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-lg font-bold tracking-tight text-[#737373] dark:text-white">The Largest Home
+                        Builders and Developers In Bangladesh</h5>
+                </a>
+                <p class="mb-3 text-sm text-[#737373]"><strong>Asset Developments & Holdings Ltd</strong> has the
+                    strongest organization in the sector having 2000 plus employees consisting of managers, engineers,
+                    sales…</p>
+                <!-- Hidden content -->
+                <div class="more-text hidden text-sm text-[#737373]">
+                    <p>
+                        Asset Developments & Holdings Ltd has been a major player in the construction and real estate
+                        industry,
+                        with a strong presence in both residential and commercial development. Our expertise spans
+                        various
+                        sectors including real estate, construction management, and project development. We are
+                        committed to
+                        delivering high-quality projects that exceed client expectations and contribute to the
+                        advancement of
+                        infrastructure and urban development in Bangladesh.
+                    </p>
+                </div>
+                <a href="#"
+                    class="read-more-toggle inline-flex items-center text-sm font-medium text-center text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                    <span class="read-more-text">Read more</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- script for read more text and selected menu item -->
+     <script>
+         // code for menu item selecting efefct
+         function setActive(selectedItem) {
+            // Remove the 'text-yellow-500' class from all items
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.classList.remove('text-yellow-500');
+                item.classList.add('text-white');
+            });
+
+            // Add the 'text-yellow-500' class to the clicked item
+            selectedItem.classList.remove('text-white');
+            selectedItem.classList.add('text-yellow-500');
+        }
+     </script>
+    <script>
+        // for toogle more text show
+        document.querySelectorAll('.read-more-toggle').forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Find the closest `.more-text` relative to the button
+                const card = this.closest('.max-w-sm');
+                const moreText = card.querySelector('.more-text');
+                const readMoreText = this.querySelector('.read-more-text');
+
+                // Toggle visibility and text
+                if (moreText.classList.contains('hidden')) {
+                    moreText.classList.remove('hidden');
+                    readMoreText.textContent = 'Read less';
+                } else {
+                    moreText.classList.add('hidden');
+                    readMoreText.textContent = 'Read more';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
